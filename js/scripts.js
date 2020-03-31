@@ -4,13 +4,11 @@ $(document).ready(function(){
 
     const string = $("#palindrome").val()
     const stringArray = string.split("");
-    console.log(stringArray);
     const stringReverseArray = stringArray.reverse();
     const stringReversed = stringReverseArray.join("")
-    // stringArray.reverse()
-    console.log(`string ${string}`);
-    console.log(`stringReversed ${stringReversed}`);
+    if (stringReversed === string){
+      $("#output").append(`<h2>${string} is a palindrome</h2>`);
+    }
 
-  });
-    
+  }); 
 });
