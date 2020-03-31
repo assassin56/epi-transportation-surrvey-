@@ -1,11 +1,16 @@
 $(document).ready(function(){
-  $("form#transportation_survey").submit(function(event){
+  $("form").submit(function(event){
     event.preventDefault();
-    $("#work-responses").show();
-    $("input:checkbox[name=work-transportation]:checked").each(function(){
-      var workTransportationMode = $(this).val();
-      $('#work-responses').append(workTransportationMode + "<br>");
-    });
-    $('#transportation_survey').hide();
+
+    const string = $("#palindrome").val()
+    const stringArray = string.split("");
+    console.log(stringArray);
+    const stringReverseArray = stringArray.reverse();
+    const stringReversed = stringReverseArray.join("")
+    // stringArray.reverse()
+    console.log(`string ${string}`);
+    console.log(`stringReversed ${stringReversed}`);
+
   });
+    
 });
